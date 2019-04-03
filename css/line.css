@@ -1,0 +1,141 @@
+@charset "utf-8";
+@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+@import url("./normalize.css");
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol,ul,li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+.header,.visual-content,.news-room,footer{
+    width:1120px;
+    margin: 0 auto;
+}
+
+iframe{
+    width: 100%;
+    display: block;
+    height: 610px;
+}
+
+li{
+    border: 1px solid black;
+    list-style: none;
+}
+
+.logo{
+    float: left;
+    background: green;
+}
+
+.container{
+    margin: 0 auto;
+    background: grey;
+}
+
+.flex-nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigator{
+    height: 90px;
+    background: orange;
+}
+
+.navigator-menu{
+    background: lime;
+}
+
+.menu{
+    /*float: left;*/
+    display: flex;
+    background: yellow;
+}
+
+.menu-item{
+    justify-items: center;
+    padding: 23px 25px;
+
+}
+
+.nav-option{
+    background: blue;
+    /*float: right;*/
+}
+
+.option-menu{
+    display: flex;
+
+}
+
+.visual{
+    position: relative;
+}
+
+.visual-content{
+    top: 250px;
+    left: 190px;
+    position: absolute;
+    background: lightskyblue;
+}
+
+.slogan{
+    font-size: 3.75rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.slogan-btn{
+    border: 1px solid #ffffff;
+    padding-top: 10px;
+    border-radius: 22px;
+    font-size: 1.125rem;
+    text-align: center;
+    width: 123px;
+    height: 43px;
+    margin: 0 auto;
+}
+
+.news-room{
+    background: purple;
+}
+
+.news-room h2{
+    display: inline-block;
+    font-size: 36px;
+}
+.news-room-content{
+    background: red;
+}
+
+.news-list-item{
+    float: left;
+    width: 48%;
+    background: gold;
+    margin-right: auto;
+    margin-bottom: 2px;
+}
