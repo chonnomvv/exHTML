@@ -1,11 +1,11 @@
 @charset "utf-8";
 @import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 @import url("./normalize.css");
-*, *::before, *::after{
+@import url("fontello.css");
+
+*, *::before, *::after {
     box-sizing: border-box;
 }
-
-
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -13,135 +13,289 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol,ul,li,
+dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 
 ul {
-	list-style: none;
+    list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* 기 본 스 타 일*/
 
-html{
+html {
     font-size: 10px;
 }
 
-body{
+body {
     font-size: 1.4rem;
-    font-family: "Spoqa Han Sans",sans-serif;
+    font-family: "Spoqa Han Sans", sans-serif;
     font-weight: 400;
-    background: #ffffff;
+    background: url("images/bg_flower.png") no-repeat, #aaaaaa linear-gradient(#aaaaaa 0%, #cccccc 40%, #eeeeee 70%, #ffffff 100%);
+    background-position: 50% 0;
     color: #181818;
 }
 
 /*링크스타일*/
-a{
+a {
     color: inherit;
     text-decoration: none;
 }
 
 /*숨김 콘텐츠*/
-.readable-hidden{
+.readable-hidden {
     /*background: red;*/
     overflow: hidden;
     position: absolute;
     width: 1px;
     height: 1px;
     margin: -1px;
-    clip: rect(0 ,0 ,0 ,0);
+    clip: rect(0, 0, 0, 0);
 
 }
 
-
 /* float 이슈를 해결하기위한 css module */
-.clearfix::after{
-    content:"";
+.clearfix::after {
+    content: "";
     background: yellow;
     clear: both;
     display: block;
 }
 
-.container{
-    background: silver;
+.container {
 
 }
 
-.header, .visual, .main, .slogan, .footer{
+.header, .visual, .main, .slogan, .footer {
     width: 940px;
     margin: 0 auto;
 }
+
 /* 헤 더 */
-.header{
+.header {
     background: #fff;
     position: relative;
     min-height: 100px;
-    padding: 0 30px;
+    padding: 0 30px 37px;
+    border-radius: 0 0 15px 15px;
 }
 
 /* 로 고 */
-.logo{
+.logo {
     position: absolute;
-    top: 50px; left: 65px;
+    top: 50px;
+    left: 65px;
+    z-index: 10;
 }
 
 /* 멤 버 링 크*/
-.member{
+.member {
     text-align: right;
     padding: 2px 0;
     position: relative;
     right: -10px;
 }
 
-.member li, .member a{
+/*메인메뉴*/
+.menu {
+    margin-top: 5px;
+    padding-left: 225px;
+    border-radius: 0 0 5px 5px;
+    background: #ff7400 linear-gradient(to bottom, #ff7400 0%, #fc900c 35%, #ffb67a 70%, #ff7400 100%);
+    border-top: 2px solid #181818;
+    height: 47px;
+}
+
+.menu-act .menu-item-text {
+    color: #ffff00 !important;
+
+}
+
+.sub-menu {
+    line-height: 10px;
+    padding: 10px;
+    background: aqua;
+    position: absolute;
+    display: none;
+    top: 47px;
+    left: 0px;
+    white-space: nowrap;
+    display: none;
+}
+
+.sub-menu li, sub-menu a {
     display: inline-block;
 }
 
-.member li:nth-child(n+2)::before{
+.sub-menu a {
+    padding: 8px 0;
+    margin-right: 10px;
+}
+
+.sub-menu1, .sub-menu2, .sub-menu3 {
+    left: 0;
+}
+
+.sub-menu4, .sub-menu5, .sub-menu6 {
+    right: 0;
+}
+
+.menu-act .sub-menu {
+    display: block !important;
+}
+
+/*.menu > li{*/
+/*float: left;*/
+/*}*/
+
+.menu-item {
+
+    float: left;
+    position: relative;
+
+}
+
+.menu-item-text {
+    color: #ffffff;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 45px;
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 0 20px;
+    text-shadow: 1px 0 0 #000000, 0 1px 0 #000000, -1px 0 0 #000000, 0 -1px 0 #000000;;
+
+}
+
+.menu-act .menu-item-text::after {
+    content: "";
+    background: blue;
+    display: block;
+    border-bottom: 2px solid #000000;
+}
+
+.member li, .member a {
+    display: inline-block;
+}
+
+.member li:nth-child(n+2)::before {
     content: ":";
 }
 
-.member a{
+.member a {
     padding: 8px 7px 7px 10px;
     text-transform: uppercase;
 }
 
-.visual{
-    background: orange;
-    height: 120px;
+/*비주얼*/
+@keyframes textAni {
+    0% {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0);
+        transform: translate(0, 0);
+        /*padding: 0;*/
+    }
+    100% {
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        transform: translate(400px, 75px);
+        /*padding: 75px 0 0 400px;*/
+    }
 }
-.main{
+/*배경 애니메이션*/
+@keyframes flowerAni {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.visual {
+    /*background: yellow;*/
+    height: 120px;
+    position: relative;
+}
+
+.visual::before, .visual::after {
+    /*animation-name: flowerAni;*/
+    /*animation-duration: 2s;*/
+    /*animation-iteration-count: infinite;*/
+    /*animation-direction: alternate;*/
+    /*animation-play-state:;*/
+    animation: flowerAni 2s infinite alternate;
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+}
+
+.visual::before {
+    background-position: 0 -10px, 670px 0;
+    background-image: url("images/ani_flower_01.png"), url("images/ani_flower_02.png");
+}
+
+.visual::after {
+    animation-delay: 2s;
+    background-position: 300px 0, 800px 0;
+    background-image: url("images/ani_flower_03.png"), url("images/ani_flower_04.png");
+}
+
+/*텍스트 애니메이션*/
+.visual-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    /*width: 500px;*/
+    z-index: 10;
+    -webkit-animation-name: none;
+    -moz-animation-name: none;
+    -o-animation-name: none;
+    animation-name: textAni;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.main {
     padding: 30px 15px;
     background: lime;
-    
 
     /* display: flex;
     justify-content: space-between;
@@ -150,37 +304,40 @@ a{
     overflow: hidden;
 }
 
-
-.group{
+.group {
     float: left;
     height: 30vh;
     margin: 0 15px;
 }
-.group1{
+
+.group1 {
     background: skyblue;
     width: 250px;
 
 }
-.group2{
+
+.group2 {
     background: pink;
-    width: 380px;
-;
+    width: 380px;;
 }
-.group3{
+
+.group3 {
     background: teal;
     width: 190px;
 }
-.slogan{
 
-    background:tomato ;
+.slogan {
+
+    background: tomato;
     height: 10vh;
 
 }
-.footer-bg{
-    background:purple ;
+
+.footer-bg {
+    background: purple;
 }
 
-.footer{
-    background:yellow;
+.footer {
+    background: yellow;
     height: 10vh;
 }

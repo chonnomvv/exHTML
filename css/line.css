@@ -42,26 +42,30 @@ iframe{
 }
 
 li{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     list-style: none;
 
 }
 
 .logo{
-    width: 75px;
-    font-size: 1.5em;
+    font-size: 0;
+    width: 70px;
     height: 25px;
     margin-top: 33px;
-    display: inline-block;
+    display: block;
+    top: 0;
+    left: 0;
     float: left;
-    background: green;
-    font-family: "Nanum Gothic";
+    white-space: nowrap;
+    /*background: green;*/
+    /*display: block;*/
+    background: url("https://scdn.line-apps.com/n/_s1/_0/linecorpweb-uit/images/logo_h1_v2.png") no-repeat 50%/cover;
 }
 
 .container{
 
     margin: 0 auto;
-    background: grey;
+    background: #ffffff;
 }
 
 .flex-nav{
@@ -71,18 +75,18 @@ li{
 
 .navigator{
     height: 90px;
-    background: orange;
+    /*background: orange;*/
     /*position: relative;*/
 }
 
 .navigator-menu{
-    margin-left: 100px;
+    margin-left: 142px;
 
-    background: lime;
+    /*background: lime;*/
 }
 
 .menu-item-inner{
-    background: pink;
+    /*background: pink;*/
     position: relative;
     width: 1120px;
 }
@@ -103,27 +107,42 @@ li{
 .menu{
     /*float: left;*/
     display: flex;
-    background: yellow;
+    /*background: yellow;*/
 }
 
 .menu-item{
     justify-items: center;
-    padding: 23px 25px;
+    padding: 23px 21px;
+    font-size: 1.125rem;
+    font-weight: 400;
+
 
 }
 
+.menu-item-ttl{
+    line-height: 44px;
+}
 .menu-item-inner{
+    font-size: 1rem;
     width: 1120px;
     margin: 0 auto;
     top: 50%;
     position: relative;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.inner-2,.inner-3,.inner-4{
+    display: none;
 }
 
  .header-inner-item{
+     margin-right: 32px;
      display: inline-block;
  }
 
 .menu-item-bg{
+    background: hsla(0,0%,94%,.95);
     position: absolute;
     left:0;
     width: 100%;
@@ -179,6 +198,7 @@ li{
 .news-room{
     margin-top: 50px;
     background: purple;
+    overflow: hidden;
 }
 
 .news-room h2{
@@ -187,7 +207,7 @@ li{
 }
 
 .news-room-header{
-    
+
 }
 .news-room-content{
     background: red;
@@ -204,4 +224,5 @@ li{
     margin-right: auto;
     margin-bottom: 5px;
     height: 50px;
+    display: block;
 }
