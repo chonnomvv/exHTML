@@ -2,32 +2,31 @@
 <html lang="kr-KR">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/lineCorp.css">
     <title>Title</title>
 </head>
 <body>
 <div class="container">
-    <header>
-        <h1 class="logo"><a href="#">Logo</a></h1>
+    <header class="header">
+        <h1 class="logo"><a href="#"><img src="https://scdn.line-apps.com/n/_s1/_0/linecorpweb-uit/images/logo_h1_v2.png" alt="Logo"> </a></h1>
         <section class="siteMap">
-            <h2>사이트맵 및 언어선택</h2>
-            <ul class="sitemapLan">
-                <li>SITEMAP</li>
-                <li class="language-select">
-                    <section>
-                        <h3>언어선택</h3>
-                        <ul class="language-list">
-                            <li>ENGLISH</li>
-                            <li>일본어</li>
-                            <li>한국어</li>
-                            <li>중국어</li>
-                        </ul>
-                    </section>
-                </li>
-            </ul>
+            <h2 class="readable-hidden">언어선택</h2>
+            <div class="language-area" aria-label="언어선택">
+                <button>언어선택</button>
+                <ul class="language-list">
+                    <li>ENGLISH</li>
+                    <li>일본어</li>
+                    <li>한국어</li>
+                    <li>중국어</li>
+                </ul>
+            </div>
         </section>
         <nav class="nav-menu">
-            <h2>메인메뉴</h2>
+            <h2 class="readable-hidden">메인메뉴</h2>
             <ul class="menu">
+                <li>
+                    <a href="#">SITEMAP</a>
+                </li>
                 <li>
                     <a href="#"> 회사소개</a>
                     <ul>
@@ -69,23 +68,24 @@
         </nav>
 
     </header>
-    <div class="visual">
-        <h2 class="visual-slogan">슬로건</h2>
+    <section class="visual">
+        <!--<h2 class="visual-slogan">슬로건</h2>-->
+        <h2 class="visual-content-link"><a href="#">LINE's Mission</a></h2>
         <p class="visual-content"> CLOSING THE DISTANCE </p>
-        <a href="#"><p class="visual-content-link">LINE's Mission</p></a>
-    </div>
+
+    </section>
 
     <section class="newsRoom">
         <h2 class="newsRoom-heading">NEWS ROOM</h2>
         <ul class="newsRoom-list">
             <li><a href="#">
-                <time>2019.02.19</time>
+                <time datetime="2019-02-19">2019.02.19</time>
                 라인, 웰컴 키트 디자인 프로젝트로 iF 디자인 어워드 2019 수상
-                <span>ALL</span></a>
+                <b>ALL</b></a>
             </li>
             <li><a href="#">
                 <time>2018. 12.26</time>
-                라인-한국정보과학회 블록체인 경진대회에서 링크체인 기반 에너지 거래
+                라인, 한국정보과학회 블록체인 경진대회에서 링크체인 기반 에너지 거래
                 <span>ALL</span></a></li>
 
             <li><a href="#">
@@ -104,7 +104,7 @@
                 <span>ALL</span></a>
             </li>
             <li><a href="#">
-                <time>2018. 12.11</time>
+                <time datetime="2018-12-11T18:31:27">2018. 12.11</time>
                 라인, 글로벌 개발 기술 컨퍼런스 ‘LINE DEV DAY 2018’ 개최
                 <span>ALL</span></a>
             </li>
@@ -119,33 +119,41 @@
                 <span>ALL</span></a>
             </li>
         </ul>
-        <span class="more-link">more</span>
+        <a class="more-link">more</a>
     </section>
     <section class="content-bottom">
         <h2>기타정보</h2>
-        <ul class="content-bottom-list">
-            <li><a href="#">
-                <h3>비지니스 제휴 문의</h3>
-                <p>LINE은 사용자들의 커뮤니케이션을 더욱 즐겁게 만들어줄 파트너 기업을 모집합니다.
-                </p></a>
-            </li>
-            <li><a href="#">
-                <h3>기술정보</h3>
-                <p>LINE의 개발자들은 다양한 서비스를 개발하며, 기술적 도전을 매일 경험하고있습니다.</p></a>
-            </li>
-            <li><a href="#">
-                <h3>채용공고</h3>
-                <p>전 세계 인재들과 함께 내 커리어를 level up 하고 싶다면 지금 LINE에 조인하세요!</p></a>
-            </li>
-            <li><a href="#">
-                <h3>캐릭터 사업</h3>
-                <p>메신저 속 LINE FRIENDS의 다양한 제품들은 물론, 특별한 경험도 선사합니다.</p></a>
-            </li>
-        </ul>
+        <dl class="content-bottom-list">
+            <dt><a href="#">
+                비지니스 제휴 문의</a></dt>
+            <dd><a href="#">LINE은 사용자들의 커뮤니케이션을 더욱 즐겁게 만들어줄 파트너 기업을 모집합니다.
+            </a></dd>
+            <dt><a href="#">
+                기술정보</a></dt>
+            <dd><a href="#">LINE의 개발자들은 다양한 서비스를
+                개발하며, 기술적 도전을 매일
+                경험하고있습니다.
+            </a></dd>
+            <dt><a href="#">
+                채용공고</a></dt>
+            <dd><a href="#">
+                전 세계 인재들과 함께
+                내 커리어를 level up 하고 싶다면
+                지금 LINE에 조인하세요!
+            </a></dd>
+            <dt><a href="#">
+                캐릭터 사업</a></dt>
+            <dd><a href="#">
+                메신저 속 LINE FRIENDS의
+                다양한 제품들은 물론, 특별한 경험도
+                선사합니다.
+            </a></dd>
+
+        </dl>
     </section>
     <div class="footer-bg">
         <footer class="footer">
-            <section class="familySite">
+            <div class="familySite">
                 <h2 class="familySite-heading">패밀리사이트 </h2>
                 <ul class="familySite-list">
                     <li><a href="#">Line Store</a></li>
@@ -162,16 +170,16 @@
                     <li><a href="#">Line Store</a></li>
                     <li><a href="#">Line Store</a></li>
                 </ul>
-            </section>
-            <section class="footer-content">
-                <h2 class="footer-content-heading">개인정보처리 및 회사소개</h2>
-                <ul>
+            </div>
+            <div class="footer-content">
+                <button>FamilySites</button>
+                <ul aria-label="개인정보방침 등등">
                     <li><a href="#">개인정보처방침</a></li>
                     <li><a href="#">LINE 파트너</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-                <span>LINE Corporation</span>
-            </section>
+                <small>LINE Corporation</small>
+            </div>
         </footer>
     </div>
 
