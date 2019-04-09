@@ -48,6 +48,18 @@ q:before, q:after {
     content: none;
 }
 
+/*링크스타일*/
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*버튼 스타일 */
+button {
+    border: 0;
+    outline: 0;
+}
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -63,7 +75,7 @@ table {
     clip: rect(0, 0, 0, 0);
 }
 
-.container{
+.container {
     width: 1200px;
     padding: 0 40px;
     margin: auto;
@@ -71,38 +83,103 @@ table {
 
 /*헤더부분*/
 
-.header{
+.header {
     width: 100%;
     background: orangered;
     display: flex;
     justify-content: space-between;
     padding: 36px 0 36px 0;
+    align-items: center;
+    position: relative;
 
 }
-.siteMap {
-    order: 3;
-    background: gold;
+
+.logo, .language, .nav-menu {
+    background: blueviolet;
+    height: 40px;
+    padding: 5px;
+    display: inline-block;
+    line-height: 30px;
 }
-.menu{
+
+.logo h1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-menu {
+    /*width: 49%;*/
+    position: absolute;
+    left: 230px;
+}
+
+.menu {
+    background: cornflowerblue;
+    font-size: 1.4rem;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
-.menu li{
+.menu > li {
 
+    background: darkseagreen;
+    margin-right: 50px;
 }
 
-.menu li:first-child{
+.menu li:first-child {
     order: 5;
 }
+.submenu1-pr{
+    /*position: relative;*/
+    background: darkmagenta;
+}
 
-.siteMap{
-    width: 128px;
+.menu-submenu {
+    /*width: 10px;*/
+    left: -230px;
+    width: 300%;
+    background: yellow;
+    position: absolute;
+    display: none;
+
+}
+
+.submenu1 {
+    width: 100%;background: pink;
+    display: inline-block;
+    top: 76px;
+}
+
+.submenu1 li{
+
+    margin-right: 5px;
+}
+
+.siteMap {
+    /*margin-right: -327px;*/
+    position: absolute;
+    right: -378px;
+}
+
+.language {
+    order: 3;
+    background: gold;
+    width: 130px;
+    height: 40px;
     border: 1px solid #eeeeee;
-    border-radius: 15px;
+    border-radius: 20px;
     text-align: center;
 }
-.siteMap .language-area{
+
+.language-area button {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.siteMap .language-area {
     background: pink;
     display: inline-block;
 }
+
