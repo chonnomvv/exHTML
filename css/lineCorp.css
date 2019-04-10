@@ -81,21 +81,33 @@ table {
     margin: auto;
 }
 
+.hidden-box{
+    display: none;
+}
+
 /*헤더부분*/
 
 .header {
     width: 100%;
-    background: orangered;
     display: flex;
     justify-content: space-between;
-    padding: 36px 0 36px 0;
+    padding: 34px 0 36px 0;
     align-items: center;
     position: relative;
 
 }
+/*.header::before{*/
+    /*content: '';*/
+    /*background: black;*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*height: 200px;*/
+    /*opacity: 1%;*/
+    /*top: 90px;*/
+/*}*/
 
 .logo, .language, .nav-menu {
-    background: blueviolet;
     height: 40px;
     padding: 5px;
     display: inline-block;
@@ -114,57 +126,136 @@ table {
 }
 
 .menu {
-    background: cornflowerblue;
-    font-size: 1.4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    font-size: 1.2rem;
+    display: inline-block;
+    width: 750px;
 }
 
 .menu > li {
-
-    background: darkseagreen;
-    margin-right: 50px;
+    display: inline-block;
+    margin-right: 40px;
 }
 
-.menu li:first-child {
-    order: 5;
+.menu > li {
+    float: left;
+
 }
-.submenu1-pr{
-    /*position: relative;*/
-    background: darkmagenta;
+
+.menu > .siteMap {
+    color: #aaaaaa;
+    float: right;
+    margin-right: 26px;
 }
 
 .menu-submenu {
-    /*width: 10px;*/
-    left: -230px;
-    width: 300%;
-    background: yellow;
+    padding: 20px 0;
+    /*display: inline-block;*/
+    font-size: 1.125rem;
+    display: flex;
+    justify-content: space-between;
     position: absolute;
-    display: none;
+    top: 76px;
 
+    /*width: 100%;*/
 }
 
 .submenu1 {
-    width: 100%;background: pink;
+    background: pink;
+    left: -230px;
+}
+.menu-bg{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 160px;
+    position: absolute;
+    background: black;
+    opacity: 0.2;
+    z-index: -1;
+    left: 0;
+    top: 110px;
+    /*top: ;*/
+    /*z-index: 0;*/
+}
+
+.submenu1-bg{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+}
+.submenu2 {
+    position: absolute;
+    left: 7%;
+}
+.submenu3{
+    left: 5%;
+}
+.submenu4{
+    left: 28%;
+}
+/*.submenu2 > li {*/
+    /*margin-right: 40px;*/
+    /*display: inline-block;*/
+    /*!*ds*!*/
+/*}*/
+
+.menu-submenu > li {
+    margin-right: 40px;
     display: inline-block;
-    top: 76px;
 }
 
-.submenu1 li{
-
-    margin-right: 5px;
+.submenu4, .submenu2, .submenu3 {
+    display: none;
 }
 
+.submenu-pr {
+    margin-right: 50px;
+}
+
+/*
+
+.menu > li {
+    margin-right: 50px;
+}
+
+.menu>li:first-child {
+    order: 5;
+}
+.submenu-pr{
+    position: relative;
+    background: darkmagenta;
+}
+.menu-submenu {
+    background: yellow;
+    position: absolute;
+    top: 71px;
+    display: flex;
+    display: none;
+}
+
+.submenu1{
+    display: flex;
+}
+
+.submenu1>li{
+}
+.submenu2-pr{
+    background: green;
+}
+.submenu2 {
+}
+.submenu2>li{
+}
 .siteMap {
-    /*margin-right: -327px;*/
+    !*margin-right: -327px;*!
     position: absolute;
     right: -378px;
 }
+*/
 
 .language {
+    position: relative;
     order: 3;
-    background: gold;
     width: 130px;
     height: 40px;
     border: 1px solid #eeeeee;
@@ -178,8 +269,25 @@ table {
     width: 100%;
 }
 
+.language-list{
+    position: absolute;
+    border: 1px solid #aaaaaa;
+    background: #ffffff;
+    width: 130px;
+    left: -1px;
+    top: -1px;
+    border-radius: 20px;
+    /*display: none;*/
+}
+
 .siteMap .language-area {
     background: pink;
     display: inline-block;
+}
+
+/* 커텐츠 히든 */
+
+.newsRoom, .content-bottom,.visual,.footer-bg{
+    display: none;
 }
 
