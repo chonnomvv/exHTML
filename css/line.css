@@ -167,6 +167,11 @@ li{
 
 }
 
+.option-menu-item{
+    line-height: 95px;
+    /*margin-right: 70px;*/
+}
+
 .visual{
     position: relative;
 }

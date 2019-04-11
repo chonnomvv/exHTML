@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <title>IR 기법 및 Sprite 이미지</title>
+    <style>
+        .btn-wrapper {
+            background: palegoldenrod;
+            margin: 50px;
+
+        }
+
+        .btn-wrapper span {
+            background-color: pink;
+            background-image: url("./css/images/backpage_forwardpage.png");
+            background-repeat: no-repeat;
+            display: inline-block;
+            width: 20px;
+            height: 0px;
+            padding-top: 20px;
+            overflow:   hidden;
+        }
+
+        .btn-next{
+            background-position: -40px;
+        }
+    </style>
+</head>
+<body>
+<div class="btn-wrapper">
+    <span class="btn-prev">이전</span>
+    <span class="btn-next">다음</span>
+</div>
+
+</body>
+</html>
