@@ -2,7 +2,8 @@ var item = $(".menu-item");
 var itemSubLink = $(".sub-menu a");
 var tab = $(".tab");
 var section = $(".notice, .pds");
-
+var related_li = $(".related-list li");
+var list = $(".related-list");
 
 //메인메뉴의 하위 메뉴 제어를 위한 스크립트
 item.on('mouseover focusin', function () {
@@ -31,3 +32,24 @@ tab.on("click keyup", function (e) {
     }
 
 })
+//관련 사이트 목록 제어를 위한 스크립트
+
+list.on("mouseover focusin", function(){
+    $(this).addClass("list-act");
+})
+
+list.on("mouseout focusout", function(){
+    $(this).removeClass("list-act");
+})
+
+/*
+
+related_li.on("focusin",function(){
+    $(".related-list").addClass("list-act");
+
+    related_li.on("focusout", function(){
+        $(".related-list").removeClass("list-act");
+    })
+})
+*/
+

@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+}
+.rwd-container{
+    background: yellow;
+    width: 50%;
+    box-sizing: border-box;
+    border: 10px solid #181818;
+}
+
+.rwd-container img{
+    max-width: 100%;
+    height: auto;
+}
+
+.rwd-iframe{
+    width: 100%;
+     position: relative;
+    background: pink;
+}
+.rwd-iframe iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.rwd-map-container{
+    background: yellow;
+    width: 50%;
+    box-sizing: border-box;
+    border: 10px solid #181818;
+
+}
+.rwd-map-iframe{
+    width: 100%;
+     position: relative;
+    background: skyblue;
+}
+
+.rwd-map-iframe iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.rwd-16{
+    padding-top: calc(9/16*100%);
+}
+
+.rwd-4{
+    padding-top: calc(3/4*100%);
+}

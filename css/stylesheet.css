@@ -63,7 +63,7 @@ body {
     font-size: 1.4rem;
     font-family: "Spoqa Han Sans", sans-serif;
     font-weight: 400;
-    background: url("images/bg_flower.png") no-repeat, #aaaaaa linear-gradient(#aaaaaa 0%, #cccccc 40%, #eeeeee 70%, #ffffff 100%);
+    background: url("images/bg_flower.png") no-repeat, #aaaaaa linear-gradient(#aaaaaa 0%, #eeeeee 40%, #ffffff 70%, #ffffff 100%);
     background-position: 50% 0;
     color: #181818;
 }
@@ -880,93 +880,99 @@ a {
     position: absolute;
 }*/
 
-.news{
+.news {
     margin-top: 20px;
     position: relative;
 }
-.news::before{
+
+.news::before {
     content: '';
     position: absolute;
     top: 35px;
     left: 0;
     width: 80%;
     height: 1px;
-    background:#aaaaaa linear-gradient(to right, #aaaaaa, #ffffff);
+    background: #aaaaaa linear-gradient(to right, #aaaaaa, #ffffff);
 
 }
 
-.news-heading{
+.news-heading {
     color: #e25d2d;
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-.news-item{
+.news-item {
     position: relative;
     margin-top: 35px;
 }
 
-.news-item a{
+.news-item a {
     display: block;
     padding-left: 130px;
 }
 
-.news-item-thumbnail{
+.news-item-thumbnail {
     position: absolute;
     top: 3px;
     left: 0;
     text-align: center;
 }
 
-
-.news-item-thumbnail img{
+.news-item-thumbnail img {
     margin-bottom: 15px;
     box-shadow: 0 10px 15px;
 }
 
-.news-item-subject{
+.news-item-subject {
     font-size: 1.5rem;
 }
-.news-item-date{
+
+.news-item-date {
 }
-.news-item-brief{
+
+.news-item-brief {
     margin-top: 10px;
     line-height: 1.5;
 }
-.news-more{
+
+.news-more {
     position: absolute;
     padding: 8px;
     top: -8px;
     right: -8px;
 }
-.news-more::before{
-    color: hsla(110,90%,30%,1);
+
+.news-more::before {
+    color: hsla(110, 90%, 30%, 1);
 }
 
 /*신규이벤트 & 관련 사이트*/
-.event-related{
-    background: #cccccc linear-gradient(#cccccc,#eeeeee);
+.event-related {
+    background: #cccccc linear-gradient(#cccccc, #eeeeee);
     border: 1px solid #aaaaaa;
     border-radius: 5px;
     padding: 10px;
     position: relative;
 }
 
-.event{
+.event {
     padding-bottom: 10px;
 }
 
-.event-heading{
+.event-heading {
     font-weight: 700;
 }
-.event-heading span{
+
+.event-heading span {
     color: #e25d2d;
 }
 
 #event-detail {
     margin-top: 10px;
 }
-#event-detail img{
+
+#event-detail img {
     box-shadow: 5px 5px #aaaaaa;
 }
 
@@ -976,7 +982,7 @@ a {
     text-align: center;
 }
 
-.btn-event{
+.btn-event {
     /*background: yellow;*/
     height: 18px;
     padding: 2px;
@@ -985,7 +991,8 @@ a {
     top: 10px;
     right: 10px;
 }
-.btn-event-prev, .btn-event-next{
+
+.btn-event-prev, .btn-event-next {
     margin: 1px;
     width: 19px;
     height: 18px;
@@ -994,9 +1001,10 @@ a {
     background: url("images/back_forward.png") no-repeat;
 }
 
-.btn-event-next{
+.btn-event-next {
     background-position: 100% 0;
 }
+
 /*
 .btn-event-prev, .btn-event-next{
     overflow: hidden;
@@ -1021,37 +1029,175 @@ a {
 
 }*/
 
-
-.related{
+.related {
     /*background: deepskyblue;*/
     padding-top: 10px;
+    border-top: #aaaaaa 1px solid;
 }
 
-.related-heading{
+.related-heading, .favorite-heading {
     font-weight: 700;
 }
-.related-heading span{
+
+.related-heading span, .favorite-heading span {
     color: #e25d2d;
 }
 
-.related-list{
+.related-list {
+    background: #ffffff;
     border: 1px solid #aaaaaa;
+    padding: 0 5px;
     margin-top: 10px;
     text-align: left;
     border-radius: 5px;
     height: 27px;
     overflow: hidden;
+    transition: all .4s;
 }
 
-.related-list:hover{
-    height: 108px;
+.related-list a {
+    display: block;
 }
-.related-list li{
-    background: #ffffff;
+
+.related-list:hover, .related-list:focus, .list-act {
+    padding: 10px 0;
+    height: 147px;
+}
+
+.related-list li {
+    padding: 3px 0 3px 15px;
+
     /*line-height: 26px;*/
-    padding-left: 15px;
 
     display: block;
+}
+
+/*
+.favorite {
+    background: #cccccc linear-gradient(#cccccc, #eeeeee);
+    position: relative;
+    margin-top: 22px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.favorite-heading {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.favorite-heading span {
+    color: #e25d2d;
+}
+
+.favorite-more {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.favorite-more::before {
+    color: hsla(110, 90%, 30%, 1);
+}
+.favorite-list{
+}
+
+.favorite-list li{
+    margin-bottom: 3px;
+    !*display: block;*!
+    position: relative;
+    margin-left: 15px;
+    !*list-style: square;*!
+}
+
+.favorite-list em {
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    background-image: url("images/rank.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 9px;
+    height: 0px;
+    padding-top: 11px;
+    overflow: hidden;
+}
+
+.down{
+    background-position: 0 -44px;
+}
+.stop{
+    background-position: 0 -20px;
+}*/
+
+/*인기사이트*/
+
+.favorite {
+    position: relative;
+    margin-top: 20px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    padding: 10px 10px 5px 10px;
+    background: #cccccc linear-gradient(#cccccc, #eeeeee);
+}
+
+.favorite-more {
+    position: absolute;
+    padding: 8px;
+    top: 2px;
+    right: 2px;
+}
+
+.favorite-more::before {
+    color: hsla(110, 90%, 30%, 1);
+}
+
+.favorite-list{
+    margin-top: 5px;
+    overflow: hidden;
+    /*counter-reset: 0;*/
+}
+
+.favorite-list li{
+    position: relative;
+    counter-increment: number;
+    margin:5px 0;
+
+}
+
+
+.favorite-list li:before{
+    content: counter(number);
+    background: #aaaaaa;
+    color: #ffffff;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 0px 5px;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+
+.up,.down,.stop{
+    background: url("images/rank.png") no-repeat;
+    position: absolute;
+    width: 9px;
+    height: 11px;
+    padding-top: 11px;
+    overflow: hidden;
+    right: 0;
+    top: 50%;
+    margin-top: -5px;
+    /*margin-top: -11px;*/
+}
+
+.stop{
+    background-position: 0 50%;
+}
+.down{
+    background-position: 0 100%;
 }
 
 
@@ -1059,16 +1205,90 @@ a {
 
 /*슬로건*/
 .slogan {
-    background: tomato;
-    height: 10vh;
+    padding: 30px 70px 10px 180px;
+    /*background: pink;*/
+    position: relative;
+}
+
+.slogan-heading{
+    /*background: lime;*/
+    width: 110px;
+    height: 83px;
+    position: absolute;
+    left: 35px;
+    bottom: -35px;
+    text-align: center;
+    line-height: 83px;
+}
+
+.slogan-heading::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("images/coffee.png");
+}
+
+.slogan-content{
+    color: #a09874;
+}
+
+.slogan-content q::before{
+
+    content: '"';
+    font-size: 3rem;
+    position: relative;
+    top: 10px;
 }
 
 /*푸터*/
 .footer-bg {
-    background: purple;
+    background:#aaaaaa linear-gradient(#aaaaaa 0%, #eeeeee 40%, #ffffff 70%, #ffffff 100%);
+
 }
 
 .footer {
-    background: yellow;
-    height: 10vh;
+    /*background: yellow;*/
+    position: relative;
+    padding: 15px 100px 15px 180px;
+}
+.footer-logo{
+    background: lime;
+    position: absolute;
+    top: 35px;
+    left: 40px;
+}
+.bedge{
+    top: 15px;
+    right: 0;
+    position: absolute;
+    background: pink;
+}
+.guide{
+    background: #aaaaaa;
+    color: #eeeeee;
+    padding: 4px 0;
+    border-right: 25px;
+    text-align: center;
+
+
+}
+.guide li, .guide a{
+    display: inline-block;
+}
+.guide li:nth-child(n+2){
+    /*background: #000;*/
+}
+.guide a{
+    padding: 8px 10px;
+    text-transform: uppercase;
+}
+
+.address{
+    margin-top: 10px;
+}
+.address span{
+    margin-top: 15px;
 }
